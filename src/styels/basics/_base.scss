@@ -6,7 +6,7 @@
 
 html {
     height: 100%;
-    color: $main-text;
+    color: $text1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
@@ -14,7 +14,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: $main-background;
+    background-color: $bcg1;
 }
 
 img {
@@ -33,6 +33,6 @@ h6 {
     line-height: 120%;
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
 }

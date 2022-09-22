@@ -1,0 +1,23 @@
+@import '../../styels/setup/variables';
+
+.main-app {
+    height: 100vh;
+
+    main {
+        flex-grow: 1;
+    }
+
+    header {
+        border-bottom: solid 2px $bcg2;
+    }
+
+    header,
+    footer {
+        color: $text1;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+}

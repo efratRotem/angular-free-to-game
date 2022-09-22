@@ -3,15 +3,15 @@
   border-radius: 4px;
   border: 0;
   padding: .75em 1.5em;
-  background-color: $main-btn;
-  color: $main-background;
+  background-color: $btn1;
+  color: $bcg1;
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
 
 .btn-basic:hover {
-  background-color: $secondary-btn;
+  background-color: $btn3;
 }
 
 .btns-container {
