@@ -1,1 +1,5 @@
-<p>games-list works!</p>
+<div class="main-layout">
+    <section class="games-list">
+        <games-preview *ngFor="let game of games" [game]="game"></games-preview>
+    </section>
+</div>

@@ -1,0 +1,17 @@
+@import '../../../styels/setup/variables';
+
+.games-preview {
+    border: 1px solid $text1;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, $text1 0px 3px 6px;
+
+    h1 {
+        padding-bottom: 10px;
+    }
+
+    img {
+        padding-top: 10px;
+    }
+}
