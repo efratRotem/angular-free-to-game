@@ -9,6 +9,7 @@ import { GamesListComponent } from './cmps/games-list/games-list.component';
 import { GamesPreviewComponent } from './cmps/games-preview/games-preview.component';
 import { GamesDetailsComponent } from './pages/games-details/games-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GamesFilterComponent } from './cmps/games-filter/games-filter.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomePageComponent,
     GamesListComponent,
     GamesPreviewComponent,
-    GamesDetailsComponent
+    GamesDetailsComponent,
+    GamesFilterComponent
   ],
   imports: [
     BrowserModule,
