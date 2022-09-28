@@ -1,6 +1,6 @@
 export class Game {
     constructor(
-        public id: number,
+        public id: string,
         public title: string,
         public thumbnail: string,
         public short_description: string,

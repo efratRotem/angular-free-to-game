@@ -16,13 +16,13 @@ export class GamesDetailsComponent implements OnInit {
     private gameService: GameService
   ) { }
 
-  game! : Game
+  game!: Game
 
   ngOnInit(): void {
     console.log('In details');
     this.route.params.subscribe(async params => {
-      console.log(params);
       const game = await lastValueFrom(this.gameService.getById(params['id']))
+
       if (game) this.game = game
     })
 

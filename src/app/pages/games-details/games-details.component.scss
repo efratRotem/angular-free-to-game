@@ -1,0 +1,27 @@
+@import '../../../styels/setup/variables';
+
+.games-details {
+    margin-top: 20px;
+    color: $text2;
+
+    span {
+        color: $text1;
+    }
+
+    h1 {
+        color: $text3;
+        font-size: 1.5em;
+    }
+
+    a {
+        color: $text2;
+    }
+
+    img {
+        margin: 20px 0;
+    }
+
+    button {
+        margin-bottom: 20px;
+    }
+}

@@ -1,7 +1,14 @@
 <div class="main-layout">
-    <section class="games-details">
-        <p>games-details works!</p>
-        <h1 *ngIf="game">{{game.title}}</h1>
+    <section *ngIf="game" class="games-details">
+        <h1>{{game.title}}</h1>
+        <p>{{game.short_description}}</p>
+        <p><span>Genre:</span> {{game.genre}}</p>
+        <p><span>Platform:</span>{{game.platform}}</p>
+        <p><span>Publisher:</span> {{game.publisher}}</p>
+        <p><span>Developer:</span> {{game.developer}}</p>
+        <p><span>Released at:</span> {{game.release_date}}</p>
+        <a href="{{game.game_url}}">{{game.game_url}}</a>
+        <img src="{{game.thumbnail}}" alt="">
+        <a routerLink="/"><button class="btn-basic">Back</button></a>
     </section>
 </div>
-
