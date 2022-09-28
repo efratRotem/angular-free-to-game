@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { lastValueFrom } from 'rxjs';
+import { Game } from 'src/app/models/game';
+import { GameService } from 'src/app/services/game-service/game.service';
 
 @Component({
   selector: 'games-details',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamesDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private gameService: GameService
+  ) { }
+
+  game! : Game
 
   ngOnInit(): void {
+    console.log('In details');
+    this.route.params.subscribe(async params => {
+      console.log(params);
+      const game = await lastValueFrom(this.gameService.getById(params['id']))
+      if (game) this.game = game
+    })
+
   }
 
 }

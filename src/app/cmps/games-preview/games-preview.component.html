@@ -1,8 +1,11 @@
-<div class="main-layout" (click)="goToDetails()">
-    <section class="games-preview">
-        <h1>{{game.title}}</h1>
-        <h2>Release at: {{game.release_date}}</h2>
-        <img src="{{game.thumbnail}}" alt="">
+<div class="main-layout">
+    <section class="games-preview" >
+
+        <a [routerLink]="['/game', game.id]" class="clean-link">
+            <h1>{{game.title}}</h1>
+            <h2>Release at: {{game.release_date}}</h2>
+            <img src="{{game.thumbnail}}" alt="">
+        </a>
     </section>
 </div>
 

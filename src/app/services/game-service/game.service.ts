@@ -1,14 +1,20 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import axios from 'axios';
+import { BehaviorSubject, map, Observable, of, throwError } from 'rxjs';
+import { Game } from 'src/app/models/game';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
+  constructor(
+    private http: HttpClient,
+  ) { }
 
-  games = [
+  // Mock the database
+  private _gamesDb: Game[] = [
     {
       id: 521,
       title: "Diablo Immortal",
@@ -271,14 +277,28 @@ export class GameService {
     }
   ]
 
-  constructor(private http: HttpClient) { }
+  private _games$ = new BehaviorSubject<Game[]>([])
+  public games$ = this._games$.asObservable()
 
-  getGames() {
-    return this.games
-    // return  axios.get('https://www.freetogame.com/api/games')
+  public getGames() {
+
+    return this._gamesDb
+    // return axios.get('https://www.freetogame.com/api/games').then(res => {
+    //   console.log(res);
+
+    // })
     // return this.http.get('https://www.freetogame.com/api/games')
-    //   .pipe(map((res: any) => res))
+    //   .pipe(map((res: any) => {
+    //     console.log(res)
+    //   }))
   }
 
+  public getById(gameId: number): Observable<Game | void> {
+     //mock the server work
+    const game = this._gamesDb.find(game => game.id === gameId)
 
+    //return an observable
+    return game ? of(game) : throwError(() => `Game id ${gameId} not found!`)
+   
+  }
 }
