@@ -1,7 +1,7 @@
 <div class="main-layout">
     <section class="games-filter">
         <form>
-            <input type="text" placeholder="Search by category" class="btn-basic">
+            <input type="text" [(ngModel)]="filterBy.term" (ngModelChange)="onChangeFilter()" name="term" placeholder="Search game by title" class="btn-basic">
         </form>
 
     </section>
